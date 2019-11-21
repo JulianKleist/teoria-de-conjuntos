@@ -4,91 +4,82 @@
 #define max 100
 
 int main (){
-	int A[max],B[max],C[max],U[max],T[max],W[max];
-   int i=1,N=0,M=0,x,y,z,sw=0,k=0,j=0,D=0,F=0,S=0,kk=0,H=0;
-   int w=0;
+  int A[max],B[max],C[max],U[max],T[max],W[max];
+  int i=1,N=0,M=0,x,y,z,sw=0,k=0,j=0,D=0,F=0,S=0,kk=0,H=0;
+  int w=0;
    
-   	int num=0; //switch
-	int a,b,c; //conjuntos e interseccion de conjuntos para el segundo caso
-	int e, u; //e = interseccion de los 3 conjuntos
-	int result;
+  int num=0; //switch
+  int a,b,c; //conjuntos e interseccion de conjuntos para el segundo caso
+  int e, u; //e = interseccion de los 3 conjuntos
+  int result;
    
 
-   while(w!=3){
-   	    system("cls");
-   	    printf("\n\n\t\tTEORIA DE CONJUNTOS");
-   	    printf("\n\n   Seleccione que operacion desea realizar.");
-   	    printf("\n\n  1. Operaciones con conjuntos.");
-   	    printf("\n\n  2. Aplicacion con diagrama de Venn.");
-   	    printf("\n\n  3. Cerrar programa.");
-   	    printf("\n\n ");
-   	    scanf("%d",&w);
-		switch(w){
-			case 1:
-				//tamaño de los vectores
-			   system("cls");
-			   printf("\n\n\tOPERACIONES CON CONJUNTOS");
-			   printf("\n\n Ingrese cuantos valores tendran el Universo: ");
-			   scanf("%d",&M);
-			   //valores del universo   
-			   for(k=0;k<M;k++){
-			   	printf("\n  Valor : ");
-			   	scanf("%d",&x);
-			   	U[k]=x;
-			   	}
+  while(w!=3){
+    system("cls");
+    printf("\n\n\t\tTEORIA DE CONJUNTOS");
+    printf("\n\n   Seleccione que operacion desea realizar.");
+    printf("\n\n  1. Operaciones con conjuntos.");
+    printf("\n\n  2. Aplicacion con diagrama de Venn.");
+    printf("\n\n  3. Cerrar programa.");
+    printf("\n\n ");
+    scanf("%d",&w);
+	switch(w){
+	  case 1:
+		//tamaÃ±o de los vectores
+		system("cls");
+		printf("\n\n\tOPERACIONES CON CONJUNTOS");
+		printf("\n\n Ingrese cuantos valores tendran el Universo: ");
+		scanf("%d",&M);
+		//valores del universo   
+		for(k=0;k<M;k++){
+			printf("\n  Valor : ");
+			scanf("%d",&x);
+			U[k]=x;
+			}
 			   	
-			   system("cls");
-			   printf("\n Ingrese Cuantos valores tendra el conjunto A: ");
-			   scanf("%d",&N);
-			   	//valores del conjunto A
-			   	printf("\n\n Los elementos para el conjunto A tendran que ser seleccionados del universo ");
-			   for (i=0;i<N;i++){
-			   	
-			   	 printf("\n Valor: ");
-			   	 scanf("%d",&x);
-			   	 A[i]=x;
-			   
-			   	 
-			   }
-			   
-			   system("cls");
-			   printf("\n Ingrese Cuantos valores tendra el conjunto B: ");
-			   scanf("%d",&F);
-			   //valores del conjunto B
-			   printf("\n\n Los elementos para el conjunto B tendran que ser seleccionados del universo ");
-			   for (i=0;i<F;i++){
-			   	
-			   	 printf("\n Valor: ");
-			   	 scanf("%d",&x);
-			   	 B[i]=x;
-			   	 
-			   }
-			   
-			   system("cls");
-			   printf("\n Ingrese Cuantos valores tendra el conjunto C: ");
-			   scanf("%d",&S);
-			   //valores del conjunto C
-			   printf("\n Los elementos para el conjunto C tendran que ser seleccionados del universo ");
-			   for (i=0;i<S;i++){
-			   	 printf("\n\n Valor: ");
-			   	 scanf("%d",&x);
-			   	 C[i]=x;
-			   }
-
-			   printf("\n Presione una tecla ver los elementos del conjunto...\n");
-			    getch();
-				//impresion de vectores
-			   system("cls");
-			   printf("\n\n\tIMPRESION DE CONJUNTOS");
-			   printf("\n Los elementos del universo son: \n");
-			   for(k=0;k<M;k++){
-			   	printf("  [%d]",U[k]);
-			   }
-			   
-			   printf("\n Conjunto A: \n");
-			   for(i=0;i<N;i++){
-			   	printf("  [%d] ",A[i]);
-			   }
+			system("cls");
+			printf("\n Ingrese Cuantos valores tendra el conjunto A: ");
+			scanf("%d",&N);
+			   //valores del conjunto A
+			   printf("\n\n Los elementos para el conjunto A tendran que ser seleccionados del universo ");
+			for (i=0;i<N;i++){
+			   printf("\n Valor: ");
+			   scanf("%d",&x);
+			   A[i]=x;
+			}
+			system("cls");
+			printf("\n Ingrese Cuantos valores tendra el conjunto B: ");
+			scanf("%d",&F);
+			//valores del conjunto B
+			printf("\n\n Los elementos para el conjunto B tendran que ser seleccionados del universo ");
+			for (i=0;i<F;i++){
+			   printf("\n Valor: ");
+			   scanf("%d",&x);
+			   B[i]=x;
+			}
+			system("cls");
+			printf("\n Ingrese Cuantos valores tendra el conjunto C: ");
+			scanf("%d",&S);
+			//valores del conjunto C
+			printf("\n Los elementos para el conjunto C tendran que ser seleccionados del universo ");
+			for (i=0;i<S;i++){
+			   printf("\n\n Valor: ");
+			   scanf("%d",&x);
+			   C[i]=x;
+			 }
+			 printf("\n Presione una tecla ver los elementos del conjunto...\n");
+			 getch();
+			 //impresion de vectores
+			 system("cls");
+			 printf("\n\n\tIMPRESION DE CONJUNTOS");
+			 printf("\n Los elementos del universo son: \n");
+			 for(k=0;k<M;k++){
+			   printf("  [%d]",U[k]);
+			 }
+			 printf("\n Conjunto A: \n");
+			 for(i=0;i<N;i++){
+			   printf("  [%d] ",A[i]);
+			 }
 			   printf("\n Conjunto B: \n");
 			   for(i=0;i<F;i++){
 			   	printf("  [%d] ",B[i]);
